@@ -175,6 +175,7 @@ psaiim: CMakeFiles/psaiim.dir/build.make
 psaiim: /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so
 psaiim: /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so
 psaiim: /usr/lib/x86_64-linux-gnu/libboost_graph.so.1.83.0
+psaiim: /usr/lib/x86_64-linux-gnu/libmetis.so
 psaiim: /usr/lib/gcc/x86_64-linux-gnu/13/libgomp.so
 psaiim: /usr/lib/x86_64-linux-gnu/libpthread.a
 psaiim: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.83.0

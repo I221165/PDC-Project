@@ -1,3 +1,5 @@
+
+
 #include <mpi.h>
 #include <vector>
 #include <algorithm>
@@ -70,8 +72,14 @@ int main(int argc, char** argv) {
     if (rank == 0) log("Selecting seed...");
     std::vector<std::vector<int>> adj(G.n);
     for (auto &e : G.edges) adj[e.src].push_back(e.dst);
-    int seed = selectSeed(IP, adj, cac_id);
-    if (rank == 0) log("Selected seed: " + std::to_string(seed));
+    auto seeds = selectSeedsByAlg7(IP, adj);
+    
+if (rank==0) {
+  for (int i = 0; i < seeds.size(); ++i) {
+    log("Seed " + std::to_string(i+1) + ": " 
+        + std::to_string(seeds[i]));
+  }
+}
 
     MPI_Finalize();
     return 0;

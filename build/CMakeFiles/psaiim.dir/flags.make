@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DBOOST_GRAPH_DYN_LINK -DBOOST_GRAPH_NO_LIB -DBOOST_REGEX_DYN_LINK -DBOOST_REGEX_NO_LIB
 
-CXX_INCLUDES = -I/usr/lib/x86_64-linux-gnu/openmpi/include -I/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi
+CXX_INCLUDES = -I/usr/lib/x86_64-linux-gnu/openmpi/include -I/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -I/mnt/d/PDC/Project/psaiim_project_complete_exact_v2/src
 
-CXX_FLAGS = -std=gnu++17 -fopenmp
+CXX_FLAGS = -O3 -DNDEBUG -fopenmp
 

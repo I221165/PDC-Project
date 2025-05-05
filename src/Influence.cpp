@@ -42,13 +42,15 @@ std::vector<double> computeInfluence(
             for(int i=0;i<verts.size();++i){
                 int u=verts[i];
                 int inD=G.rev_xadj[u+1]-G.rev_xadj[u];
-                double tele=inD? (1-d)/inD:0.0;
+                int n = G.n;  
+double tele = inD ? (1-d)/(inD * n) : 0.0;
+
                 double sum=0;
                 for(int j=G.rev_xadj[u];j<G.rev_xadj[u+1];++j){
                     auto &e=G.rev_edges[j];
                     sum+= e.psi*IP[e.src]/(psi_out[e.src]+eps);
                 }
-                IP2[u]=tele + d*sum;
+                IP2[u] = tele + d*sum;
             }
             double diff=0;
             for(int u:verts) diff+=fabs(IP2[u]-IP[u]);

@@ -237,86 +237,151 @@ static int compute_IL0(
     }
     return -1;
 }
+// 1) Find black-only connected components (by CAC grouping later)
+static std::vector<int> buildBlackComponents(
+    const std::vector<bool> &isBlack,
+    const std::vector<std::vector<int>> &adj)
+{
+    int n = isBlack.size();
+    std::vector<int> comp_id(n, -1);
+    int comp_cnt = 0;
+    std::vector<int> stack;
+    stack.reserve(n);
+
+    for (int u = 0; u < n; ++u) {
+        if (!isBlack[u] || comp_id[u] != -1) continue;
+        // flood-fill / DFS
+        stack.clear();
+        stack.push_back(u);
+        comp_id[u] = comp_cnt;
+        for (size_t idx = 0; idx < stack.size(); ++idx) {
+            int v = stack[idx];
+            for (int w : adj[v]) {
+                if (isBlack[w] && comp_id[w] == -1) {
+                    comp_id[w] = comp_cnt;
+                    stack.push_back(w);
+                }
+            }
+        }
+        ++comp_cnt;
+    }
+    return comp_id;
+}
+
+// 2) Influence-BFS size (paper’s rule), with timestamped visited
+static int influenceZoneSize(
+    int start,
+    const std::vector<bool> &isBlack,
+    const std::vector<std::vector<int>> &adj,
+    std::vector<int> &visited_time,
+    int current_time)
+{
+    int n = adj.size();
+    std::queue<int> q;
+    q.push(start);
+    visited_time[start] = current_time;
+    int zone = 1;
+
+    while (!q.empty()) {
+        int v = q.front(); q.pop();
+        for (int w : adj[v]) {
+            if (visited_time[w] != current_time) {
+                visited_time[w] = current_time;
+                ++zone; 
+                if (isBlack[w]) {
+                    q.push(w);
+                }
+            }
+        }
+    }
+    return zone;
+}
+
+
+
+
+// Influence-BFS: start from a black node u, visit all neighbors (mark visited),
+// but only enqueue *black* nodes for further expansion :contentReference[oaicite:0]{index=0}.
+static int influenceBFS_size(
+    int u,
+    const std::vector<bool> &isBlack,
+    const std::vector<std::vector<int>> &adj)
+{
+    int n = adj.size();
+    std::vector<bool> visited(n, false);
+    std::queue<int> q;
+
+    visited[u] = true;
+    q.push(u);
+    int size = 1; // count u itself
+
+    while (!q.empty()) {
+        int v = q.front(); q.pop();
+        for (int w : adj[v]) {
+            if (!visited[w]) {
+                visited[w] = true;
+                ++size;               // every neighbor, black or white, is counted
+                if (isBlack[w]) {
+                    q.push(w);        // but only black nodes continue the BFS
+                }
+            }
+        }
+    }
+    return size;
+}
+
 
 std::vector<int> selectSeedsByAlg7(
     const std::vector<double> &IP,
-    const std::vector<std::vector<int>> &adj)
+    const std::vector<std::vector<int>> &adj,
+    const std::vector<int> &cac_id)
 {
     int n = IP.size();
-    // 1) Compute IL0 for each node, and mark “black” candidates
-    std::vector<int> IL0(n);
-    std::vector<bool> isBlack(n,false);
+    // mark black candidates
+    std::vector<bool> isBlack(n, false);
     for (int v = 0; v < n; ++v) {
         int L0 = compute_IL0(v, IP, adj);
-        IL0[v] = L0;
-        if (L0 >= 1) {
-            // by definition of IL0, IP[v] > IL[L0], so it’s a candidate
-            isBlack[v] = true;
+        isBlack[v] = (L0 >= 1);
+    }
+
+    // build black-only components
+    auto comp_id = buildBlackComponents(isBlack, adj);
+    int Ccomp = *std::max_element(comp_id.begin(), comp_id.end()) + 1;
+
+    // group nodes by component
+    std::vector<std::vector<int>> comps(Ccomp);
+    for (int u = 0; u < n; ++u) {
+        if (comp_id[u] >= 0) comps[comp_id[u]].push_back(u);
+    }
+
+    // prepare for zone-size BFS
+    std::vector<int> visited_time(n, 0);
+    int timer = 1;
+
+    // compute zone size per component
+    std::vector<int> comp_zone(Ccomp, 0);
+    for (int cid = 0; cid < Ccomp; ++cid) {
+        int u = comps[cid][0];
+        comp_zone[cid] = influenceZoneSize(u, isBlack, adj, visited_time, timer++);
+    }
+
+    // now pick one seed per CAC
+    int C = *std::max_element(cac_id.begin(), cac_id.end()) + 1;
+    std::vector<int> best_zone(C, -1), seeds(C, -1);
+
+    for (int u = 0; u < n; ++u) {
+        if (!isBlack[u]) continue;
+        int c = cac_id[u];
+        int z = comp_zone[ comp_id[u] ];
+        if (z > best_zone[c]) {
+            best_zone[c] = z;
+            seeds[c]    = u;
         }
     }
 
-    // 2) Discover disjoint black‐only components (directed)
-    std::vector<bool> visited(n,false);
-    std::vector<int> seeds;
-    for (int v = 0; v < n; ++v) {
-        if (!isBlack[v] || visited[v]) continue;
-
-        // BFS to collect this component’s black nodes
-        std::vector<int> comp;
-        std::queue<int> q;
-        visited[v] = true;
-        q.push(v);
-        comp.push_back(v);
-
-        while (!q.empty()) {
-            int u = q.front(); q.pop();
-            for (int w : adj[u]) {
-                if (isBlack[w] && !visited[w]) {
-                    visited[w] = true;
-                    q.push(w);
-                    comp.push_back(w);
-                }
-            }
-        }
-
-        // 3) Rank each node u in comp by its
-        //    tree‐rank = average distance in its black‐BFS‐tree
-        double bestRank = 1e308;
-        int bestNode = -1;
-
-        for (int u : comp) {
-            // BFS again on black‐only subgraph rooted at u
-            std::vector<int> dist(n, -1);
-            std::queue<int> q2;
-            dist[u] = 0;
-            q2.push(u);
-            double sumDist = 0;
-            int count = 0;
-
-            while (!q2.empty()) {
-                int x = q2.front(); q2.pop();
-                for (int y : adj[x]) {
-                    if (isBlack[y] && dist[y] < 0) {
-                        dist[y] = dist[x] + 1;
-                        sumDist += dist[y];
-                        ++count;
-                        q2.push(y);
-                    }
-                }
-            }
-
-            double rankVal = (count>0 ? sumDist / count : 1e308);
-            if (rankVal < bestRank) {
-                bestRank = rankVal;
-                bestNode = u;
-            }
-        }
-
-        // 4) bestNode is the minimal‐rank root for this component
-        if (bestNode >= 0) {
-            seeds.push_back(bestNode);
-        }
-    }
-
+    // remove any empty slots if desired, or return as-is
     return seeds;
 }
+
+
+

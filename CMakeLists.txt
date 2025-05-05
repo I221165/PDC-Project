@@ -1,6 +1,11 @@
 cmake_minimum_required(VERSION 3.10)
 project(psaiim_project)
 
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Find required packages
 find_package(MPI REQUIRED)
 find_package(OpenMP REQUIRED)
 find_package(Boost COMPONENTS graph REQUIRED)

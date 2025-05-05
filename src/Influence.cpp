@@ -65,6 +65,8 @@ std::vector<double> computeInfluence(
                 for(int i=0;i<verts.size();++i){
                     int u=verts[i];
                     int inD=G.rev_xadj[u+1]-G.rev_xadj[u];
+
+                    
                     int n = G.n;  
                     double tele = inD ? (1-d)/(inD * n) : 0.0;
 

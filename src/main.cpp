@@ -73,13 +73,40 @@ int main(int argc, char** argv) {
     std::vector<std::vector<int>> adj(G.n);
     for (auto &e : G.edges) adj[e.src].push_back(e.dst);
     auto seeds = selectSeedsByAlg7(IP, adj);
-    
-if (rank==0) {
-  for (int i = 0; i < seeds.size(); ++i) {
-    log("Seed " + std::to_string(i+1) + ": " 
-        + std::to_string(seeds[i]));
-  }
+ // after:
+//   auto seeds = selectSeedsByAlg7(IP, adj);
+// add:
+
+if (rank == 0) {
+    // 1) Score each seed by its Influence Power
+    std::vector<std::pair<double,int>> scored;
+    scored.reserve(seeds.size());
+    for (int v : seeds) {
+        scored.emplace_back(IP[v], v);
+    }
+
+    // 2) Sort descending by IP
+    std::sort(scored.begin(), scored.end(),
+              [](auto &a, auto &b){ return a.first > b.first; });
+
+    // 3) Truncate to top-k
+    int take = std::min(k, (int)scored.size());
+    std::vector<int> topSeeds;
+    topSeeds.reserve(take);
+    for (int i = 0; i < take; ++i) {
+        topSeeds.push_back(scored[i].second);
+    }
+
+    // 4) Log them
+    log("Top " + std::to_string(take) + " seeds by Influence Power:");
+    for (int i = 0; i < take; ++i) {
+        int v = topSeeds[i];
+        log("  Seed " + std::to_string(i+1)
+            + " (IP=" + std::to_string(scored[i].first) + "): "
+            + std::to_string(v));
+    }
 }
+
 
     MPI_Finalize();
     return 0;

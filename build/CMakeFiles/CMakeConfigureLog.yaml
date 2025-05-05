@@ -2987,3 +2987,201 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-PwJ6l8"
+      binary: "/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-PwJ6l8"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-PwJ6l8'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_00bb5/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_00bb5.dir/build.make CMakeFiles/cmTC_00bb5.dir/build
+        gmake[1]: Entering directory '/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-PwJ6l8'
+        Building C object CMakeFiles/cmTC_00bb5.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi  -o CMakeFiles/cmTC_00bb5.dir/test_mpi.c.o -c "/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-PwJ6l8/test_mpi.c"
+        Linking C executable cmTC_00bb5
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_00bb5.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_00bb5.dir/test_mpi.c.o -o cmTC_00bb5  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/openmpi/lib /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so 
+        gmake[1]: Leaving directory '/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-PwJ6l8'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-GW7Ehp"
+      binary: "/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-GW7Ehp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-GW7Ehp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f1dfc/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f1dfc.dir/build.make CMakeFiles/cmTC_f1dfc.dir/build
+        gmake[1]: Entering directory '/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-GW7Ehp'
+        Building CXX object CMakeFiles/cmTC_f1dfc.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi  -o CMakeFiles/cmTC_f1dfc.dir/test_mpi.cpp.o -c "/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-GW7Ehp/test_mpi.cpp"
+        Linking CXX executable cmTC_f1dfc
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f1dfc.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_f1dfc.dir/test_mpi.cpp.o -o cmTC_f1dfc  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/openmpi/lib /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so 
+        gmake[1]: Leaving directory '/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-GW7Ehp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-srRIhH"
+      binary: "/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-srRIhH"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-srRIhH'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ec713/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ec713.dir/build.make CMakeFiles/cmTC_ec713.dir/build
+        gmake[1]: Entering directory '/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-srRIhH'
+        Building CXX object CMakeFiles/cmTC_ec713.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi  -o CMakeFiles/cmTC_ec713.dir/test_mpi.cpp.o -c "/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-srRIhH/test_mpi.cpp"
+        Linking CXX executable cmTC_ec713
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ec713.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_ec713.dir/test_mpi.cpp.o -o cmTC_ec713  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/openmpi/lib /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so 
+        gmake[1]: Leaving directory '/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-srRIhH'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-PW46eW"
+      binary: "/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-PW46eW"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-PW46eW'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b9b2b/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b9b2b.dir/build.make CMakeFiles/cmTC_b9b2b.dir/build
+        gmake[1]: Entering directory '/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-PW46eW'
+        Building C object CMakeFiles/cmTC_b9b2b.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi  -o CMakeFiles/cmTC_b9b2b.dir/test_mpi.c.o -c "/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-PW46eW/test_mpi.c"
+        Linking C executable cmTC_b9b2b
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b9b2b.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_b9b2b.dir/test_mpi.c.o -o cmTC_b9b2b  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/openmpi/lib /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so 
+        gmake[1]: Leaving directory '/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-PW46eW'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-mc2XZk"
+      binary: "/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-mc2XZk"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-mc2XZk'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_80162/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_80162.dir/build.make CMakeFiles/cmTC_80162.dir/build
+        gmake[1]: Entering directory '/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-mc2XZk'
+        Building CXX object CMakeFiles/cmTC_80162.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi  -o CMakeFiles/cmTC_80162.dir/test_mpi.cpp.o -c "/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-mc2XZk/test_mpi.cpp"
+        Linking CXX executable cmTC_80162
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_80162.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_80162.dir/test_mpi.cpp.o -o cmTC_80162  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/openmpi/lib /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so 
+        gmake[1]: Leaving directory '/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-mc2XZk'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:4 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-LkeBrD"
+      binary: "/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-LkeBrD"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-LkeBrD'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e2131/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e2131.dir/build.make CMakeFiles/cmTC_e2131.dir/build
+        gmake[1]: Entering directory '/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-LkeBrD'
+        Building CXX object CMakeFiles/cmTC_e2131.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi  -o CMakeFiles/cmTC_e2131.dir/test_mpi.cpp.o -c "/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-LkeBrD/test_mpi.cpp"
+        Linking CXX executable cmTC_e2131
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e2131.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_e2131.dir/test_mpi.cpp.o -o cmTC_e2131  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/openmpi/lib /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so 
+        gmake[1]: Leaving directory '/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/CMakeFiles/CMakeScratch/TryCompile-LkeBrD'
+        
+      exitCode: 0
+...

@@ -1,0 +1,351 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 99.42    323.86   323.86        1   323.86   324.00  std::vector<double, std::allocator<double> >::_M_fill_assign(unsigned long, double const&)
+  0.35    324.99     1.13        1     1.13     1.13  std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_fill_assign(unsigned long, std::vector<int, std::allocator<int> > const&)
+  0.10    325.32     0.33        1     0.33     0.35  selectSeedsByAlg7(std::vector<double, std::allocator<double> > const&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&, int)
+  0.04    325.46     0.14  9441595     0.00     0.00  void std::deque<int, std::allocator<int> >::_M_push_back_aux<int const&>(int const&)
+  0.03    325.55     0.09                             main
+  0.02    325.61     0.06                             _init
+  0.01    325.65     0.04        1     0.04     1.23  psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&)
+  0.01    325.68     0.03        1     0.03     0.03  loadGraph(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.01    325.70     0.02   423131     0.00     0.00  std::_Function_handler<void (int), psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&)::{lambda(int)#1}>::_M_invoke(std::_Any_data const&, int&&)
+  0.01    325.72     0.02        1     0.02     0.02  std::_Hashtable<int, int, std::allocator<int>, std::__detail::_Identity, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, true, true> >::_M_rehash(unsigned long, unsigned long const&)
+  0.01    325.74     0.02        1     0.02     0.02  std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >* std::__do_uninit_fill_n<std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >*, unsigned long, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > >(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >*, unsigned long, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&)
+  0.00    325.75     0.01   959063     0.00     0.00  void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&)
+  0.00    325.76     0.01   266316     0.00     0.00  std::vector<EdgeData, std::allocator<EdgeData> >::_M_default_append(unsigned long)
+  0.00    325.76     0.00   466550     0.00     0.00  std::vector<int, std::allocator<int> >::push_back(int const&)
+  0.00    325.76     0.00   454624     0.00     0.00  std::_Deque_base<int, std::allocator<int> >::_M_initialize_map(unsigned long)
+  0.00    325.76     0.00       15     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)
+  0.00    325.76     0.00       11     0.00     0.00  log(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+  0.00    325.76     0.00       11     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > __gnu_cxx::__to_xstring<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char>(int (*)(char*, unsigned long, char const*, __va_list_tag*), unsigned long, char const*, ...)
+  0.00    325.76     0.00       11     0.00     0.00  std::__cxx11::to_string(int)
+  0.00    325.76     0.00       10     0.00     0.00  std::vector<int, std::allocator<int> >::~vector()
+  0.00    325.76     0.00        7     0.00     0.00  std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)
+  0.00    325.76     0.00        6     0.00     0.00  std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&)
+  0.00    325.76     0.00        4     0.00     0.00  std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::~vector()
+  0.00    325.76     0.00        4     0.00     0.00  std::vector<int, std::allocator<int> >* std::__do_uninit_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&)
+  0.00    325.76     0.00        3     0.00     0.00  std::vector<std::pair<int, double>, std::allocator<std::pair<int, double> > >::~vector()
+  0.00    325.76     0.00        2     0.00     0.00  CSRGraph::~CSRGraph()
+  0.00    325.76     0.00        2     0.00     0.00  std::vector<EdgeData, std::allocator<EdgeData> >::~vector()
+  0.00    325.76     0.00        2     0.00     0.00  std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&)
+  0.00    325.76     0.00        2     0.00     0.00  std::vector<int, std::allocator<int> >::vector(unsigned long, std::allocator<int> const&)
+  0.00    325.76     0.00        1     0.00   324.00  psaim::computeInfluence(CSRGraph const&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&, ompi_communicator_t*)
+  0.00    325.76     0.00        1     0.00     0.00  std::_Function_handler<void (int), psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&)::{lambda(int)#1}>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation)
+  0.00    325.76     0.00        1     0.00     0.00  std::vector<double, std::allocator<double> >::~vector()
+  0.00    325.76     0.00        1     0.00     0.00  std::vector<int, std::allocator<int> >::resize(unsigned long)
+  0.00    325.76     0.00        1     0.00     0.00  std::vector<int, std::allocator<int> >::reserve(unsigned long)
+  0.00    325.76     0.00        1     0.00     0.00  std::__cxx11::to_string(unsigned long)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2024 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) for 0.00% of 325.76 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]    100.0    0.09  325.61                 main [1]
+                0.00  324.00       1/1           psaim::computeInfluence(CSRGraph const&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&, ompi_communicator_t*) [2]
+                0.04    1.19       1/1           psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) [4]
+                0.33    0.02       1/1           selectSeedsByAlg7(std::vector<double, std::allocator<double> > const&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&, int) [6]
+                0.03    0.00       1/1           loadGraph(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [9]
+                0.00    0.00  417347/959063      void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [13]
+                0.00    0.00  466550/466550      std::vector<int, std::allocator<int> >::push_back(int const&) [21]
+                0.00    0.00      15/15          std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) [23]
+                0.00    0.00      11/11          log(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [24]
+                0.00    0.00      11/11          std::__cxx11::to_string(int) [26]
+                0.00    0.00      10/10          std::vector<int, std::allocator<int> >::~vector() [27]
+                0.00    0.00      10/11          std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > __gnu_cxx::__to_xstring<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char>(int (*)(char*, unsigned long, char const*, __va_list_tag*), unsigned long, char const*, ...) [25]
+                0.00    0.00       7/7           std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [28]
+                0.00    0.00       4/4           std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::~vector() [30]
+                0.00    0.00       3/3           std::vector<std::pair<int, double>, std::allocator<std::pair<int, double> > >::~vector() [32]
+                0.00    0.00       2/2           std::vector<EdgeData, std::allocator<EdgeData> >::~vector() [34]
+                0.00    0.00       2/2           CSRGraph::~CSRGraph() [33]
+                0.00    0.00       2/2           std::vector<int, std::allocator<int> >::vector(unsigned long, std::allocator<int> const&) [36]
+                0.00    0.00       2/2           std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) [35]
+                0.00    0.00       1/1           std::__cxx11::to_string(unsigned long) [41]
+                0.00    0.00       1/1           std::vector<double, std::allocator<double> >::~vector() [38]
+                0.00    0.00       1/1           std::vector<int, std::allocator<int> >::reserve(unsigned long) [40]
+                0.00    0.00       1/1           std::vector<int, std::allocator<int> >::resize(unsigned long) [39]
+                0.00    0.00       1/4           std::vector<int, std::allocator<int> >* std::__do_uninit_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) [31]
+-----------------------------------------------
+                0.00  324.00       1/1           main [1]
+[2]     99.5    0.00  324.00       1         psaim::computeInfluence(CSRGraph const&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&, ompi_communicator_t*) [2]
+              323.86    0.14       1/1           std::vector<double, std::allocator<double> >::_M_fill_assign(unsigned long, double const&) [3]
+-----------------------------------------------
+              323.86    0.14       1/1           psaim::computeInfluence(CSRGraph const&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&, ompi_communicator_t*) [2]
+[3]     99.5  323.86    0.14       1         std::vector<double, std::allocator<double> >::_M_fill_assign(unsigned long, double const&) [3]
+                0.14    0.00 9412178/9441595     void std::deque<int, std::allocator<int> >::_M_push_back_aux<int const&>(int const&) [7]
+                0.00    0.00      26/959063      void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [13]
+                0.00    0.00  453967/454624      std::_Deque_base<int, std::allocator<int> >::_M_initialize_map(unsigned long) [22]
+-----------------------------------------------
+                0.04    1.19       1/1           main [1]
+[4]      0.4    0.04    1.19       1         psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) [4]
+                1.13    0.00       1/1           std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_fill_assign(unsigned long, std::vector<int, std::allocator<int> > const&) [5]
+                0.02    0.00  423131/423131      std::_Function_handler<void (int), psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&)::{lambda(int)#1}>::_M_invoke(std::_Any_data const&, int&&) [10]
+                0.02    0.00       1/1           std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >* std::__do_uninit_fill_n<std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >*, unsigned long, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > >(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >*, unsigned long, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [12]
+                0.01    0.00  266314/266316      std::vector<EdgeData, std::allocator<EdgeData> >::_M_default_append(unsigned long) [14]
+                0.00    0.00   90869/959063      void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [13]
+                0.00    0.00    3478/9441595     void std::deque<int, std::allocator<int> >::_M_push_back_aux<int const&>(int const&) [7]
+                0.00    0.00       4/6           std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&) [29]
+                0.00    0.00       2/454624      std::_Deque_base<int, std::allocator<int> >::_M_initialize_map(unsigned long) [22]
+                0.00    0.00       1/11          std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > __gnu_cxx::__to_xstring<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char>(int (*)(char*, unsigned long, char const*, __va_list_tag*), unsigned long, char const*, ...) [25]
+                0.00    0.00       1/1           std::_Function_handler<void (int), psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&)::{lambda(int)#1}>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation) [37]
+-----------------------------------------------
+                1.13    0.00       1/1           psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) [4]
+[5]      0.3    1.13    0.00       1         std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_fill_assign(unsigned long, std::vector<int, std::allocator<int> > const&) [5]
+                0.00    0.00       1/4           std::vector<int, std::allocator<int> >* std::__do_uninit_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) [31]
+-----------------------------------------------
+                0.33    0.02       1/1           main [1]
+[6]      0.1    0.33    0.02       1         selectSeedsByAlg7(std::vector<double, std::allocator<double> > const&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&, int) [6]
+                0.02    0.00       1/1           std::_Hashtable<int, int, std::allocator<int>, std::__detail::_Identity, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, true, true> >::_M_rehash(unsigned long, unsigned long const&) [11]
+                0.00    0.00   25875/9441595     void std::deque<int, std::allocator<int> >::_M_push_back_aux<int const&>(int const&) [7]
+                0.00    0.00     655/454624      std::_Deque_base<int, std::allocator<int> >::_M_initialize_map(unsigned long) [22]
+-----------------------------------------------
+                0.00    0.00      64/9441595     std::_Function_handler<void (int), psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&)::{lambda(int)#1}>::_M_invoke(std::_Any_data const&, int&&) [10]
+                0.00    0.00    3478/9441595     psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) [4]
+                0.00    0.00   25875/9441595     selectSeedsByAlg7(std::vector<double, std::allocator<double> > const&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&, int) [6]
+                0.14    0.00 9412178/9441595     std::vector<double, std::allocator<double> >::_M_fill_assign(unsigned long, double const&) [3]
+[7]      0.0    0.14    0.00 9441595         void std::deque<int, std::allocator<int> >::_M_push_back_aux<int const&>(int const&) [7]
+-----------------------------------------------
+                                                 <spontaneous>
+[8]      0.0    0.06    0.00                 _init [8]
+-----------------------------------------------
+                0.03    0.00       1/1           main [1]
+[9]      0.0    0.03    0.00       1         loadGraph(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [9]
+                0.00    0.00       2/266316      std::vector<EdgeData, std::allocator<EdgeData> >::_M_default_append(unsigned long) [14]
+                0.00    0.00       2/6           std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&) [29]
+-----------------------------------------------
+                               33491             std::_Function_handler<void (int), psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&)::{lambda(int)#1}>::_M_invoke(std::_Any_data const&, int&&) [10]
+                0.02    0.00  423131/423131      psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) [4]
+[10]     0.0    0.02    0.00  423131+33491   std::_Function_handler<void (int), psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&)::{lambda(int)#1}>::_M_invoke(std::_Any_data const&, int&&) [10]
+                0.00    0.00  450821/959063      void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [13]
+                0.00    0.00      64/9441595     void std::deque<int, std::allocator<int> >::_M_push_back_aux<int const&>(int const&) [7]
+                               33491             std::_Function_handler<void (int), psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&)::{lambda(int)#1}>::_M_invoke(std::_Any_data const&, int&&) [10]
+-----------------------------------------------
+                0.02    0.00       1/1           selectSeedsByAlg7(std::vector<double, std::allocator<double> > const&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&, int) [6]
+[11]     0.0    0.02    0.00       1         std::_Hashtable<int, int, std::allocator<int>, std::__detail::_Identity, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, true, true> >::_M_rehash(unsigned long, unsigned long const&) [11]
+-----------------------------------------------
+                0.02    0.00       1/1           psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) [4]
+[12]     0.0    0.02    0.00       1         std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >* std::__do_uninit_fill_n<std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >*, unsigned long, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > >(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >*, unsigned long, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&) [12]
+-----------------------------------------------
+                0.00    0.00      26/959063      std::vector<double, std::allocator<double> >::_M_fill_assign(unsigned long, double const&) [3]
+                0.00    0.00   90869/959063      psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) [4]
+                0.00    0.00  417347/959063      main [1]
+                0.00    0.00  450821/959063      std::_Function_handler<void (int), psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&)::{lambda(int)#1}>::_M_invoke(std::_Any_data const&, int&&) [10]
+[13]     0.0    0.01    0.00  959063         void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [13]
+-----------------------------------------------
+                                1019             std::vector<EdgeData, std::allocator<EdgeData> >::_M_default_append(unsigned long) [14]
+                0.00    0.00       2/266316      loadGraph(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [9]
+                0.01    0.00  266314/266316      psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) [4]
+[14]     0.0    0.01    0.00  266316+1019    std::vector<EdgeData, std::allocator<EdgeData> >::_M_default_append(unsigned long) [14]
+                                1019             std::vector<EdgeData, std::allocator<EdgeData> >::_M_default_append(unsigned long) [14]
+-----------------------------------------------
+                0.00    0.00  466550/466550      main [1]
+[21]     0.0    0.00    0.00  466550         std::vector<int, std::allocator<int> >::push_back(int const&) [21]
+-----------------------------------------------
+                0.00    0.00       2/454624      psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) [4]
+                0.00    0.00     655/454624      selectSeedsByAlg7(std::vector<double, std::allocator<double> > const&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&, int) [6]
+                0.00    0.00  453967/454624      std::vector<double, std::allocator<double> >::_M_fill_assign(unsigned long, double const&) [3]
+[22]     0.0    0.00    0.00  454624         std::_Deque_base<int, std::allocator<int> >::_M_initialize_map(unsigned long) [22]
+-----------------------------------------------
+                0.00    0.00      15/15          main [1]
+[23]     0.0    0.00    0.00      15         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) [23]
+-----------------------------------------------
+                0.00    0.00      11/11          main [1]
+[24]     0.0    0.00    0.00      11         log(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [24]
+-----------------------------------------------
+                0.00    0.00       1/11          psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) [4]
+                0.00    0.00      10/11          main [1]
+[25]     0.0    0.00    0.00      11         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > __gnu_cxx::__to_xstring<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char>(int (*)(char*, unsigned long, char const*, __va_list_tag*), unsigned long, char const*, ...) [25]
+-----------------------------------------------
+                0.00    0.00      11/11          main [1]
+[26]     0.0    0.00    0.00      11         std::__cxx11::to_string(int) [26]
+-----------------------------------------------
+                0.00    0.00      10/10          main [1]
+[27]     0.0    0.00    0.00      10         std::vector<int, std::allocator<int> >::~vector() [27]
+-----------------------------------------------
+                0.00    0.00       7/7           main [1]
+[28]     0.0    0.00    0.00       7         std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [28]
+-----------------------------------------------
+                0.00    0.00       2/6           loadGraph(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [9]
+                0.00    0.00       4/6           psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) [4]
+[29]     0.0    0.00    0.00       6         std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&) [29]
+-----------------------------------------------
+                0.00    0.00       4/4           main [1]
+[30]     0.0    0.00    0.00       4         std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::~vector() [30]
+-----------------------------------------------
+                0.00    0.00       1/4           main [1]
+                0.00    0.00       1/4           std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_fill_assign(unsigned long, std::vector<int, std::allocator<int> > const&) [5]
+                0.00    0.00       2/4           std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) [35]
+[31]     0.0    0.00    0.00       4         std::vector<int, std::allocator<int> >* std::__do_uninit_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) [31]
+-----------------------------------------------
+                0.00    0.00       3/3           main [1]
+[32]     0.0    0.00    0.00       3         std::vector<std::pair<int, double>, std::allocator<std::pair<int, double> > >::~vector() [32]
+-----------------------------------------------
+                0.00    0.00       2/2           main [1]
+[33]     0.0    0.00    0.00       2         CSRGraph::~CSRGraph() [33]
+-----------------------------------------------
+                0.00    0.00       2/2           main [1]
+[34]     0.0    0.00    0.00       2         std::vector<EdgeData, std::allocator<EdgeData> >::~vector() [34]
+-----------------------------------------------
+                0.00    0.00       2/2           main [1]
+[35]     0.0    0.00    0.00       2         std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) [35]
+                0.00    0.00       2/4           std::vector<int, std::allocator<int> >* std::__do_uninit_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&) [31]
+-----------------------------------------------
+                0.00    0.00       2/2           main [1]
+[36]     0.0    0.00    0.00       2         std::vector<int, std::allocator<int> >::vector(unsigned long, std::allocator<int> const&) [36]
+-----------------------------------------------
+                0.00    0.00       1/1           psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) [4]
+[37]     0.0    0.00    0.00       1         std::_Function_handler<void (int), psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&)::{lambda(int)#1}>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation) [37]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[38]     0.0    0.00    0.00       1         std::vector<double, std::allocator<double> >::~vector() [38]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[39]     0.0    0.00    0.00       1         std::vector<int, std::allocator<int> >::resize(unsigned long) [39]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[40]     0.0    0.00    0.00       1         std::vector<int, std::allocator<int> >::reserve(unsigned long) [40]
+-----------------------------------------------
+                0.00    0.00       1/1           main [1]
+[41]     0.0    0.00    0.00       1         std::__cxx11::to_string(unsigned long) [41]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2024 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+   [6] selectSeedsByAlg7(std::vector<double, std::allocator<double> > const&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&, int) [14] std::vector<EdgeData, std::allocator<EdgeData> >::_M_default_append(unsigned long) [21] std::vector<int, std::allocator<int> >::push_back(int const&)
+  [24] log(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [34] std::vector<EdgeData, std::allocator<EdgeData> >::~vector() [36] std::vector<int, std::allocator<int> >::vector(unsigned long, std::allocator<int> const&)
+   [9] loadGraph(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [5] std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::_M_fill_assign(unsigned long, std::vector<int, std::allocator<int> > const&) [27] std::vector<int, std::allocator<int> >::~vector()
+   [2] psaim::computeInfluence(CSRGraph const&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&, ompi_communicator_t*) [35] std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::vector(unsigned long, std::vector<int, std::allocator<int> > const&, std::allocator<std::vector<int, std::allocator<int> > > const&) [28] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&)
+   [4] psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&) [30] std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >::~vector() [26] std::__cxx11::to_string(int)
+  [33] CSRGraph::~CSRGraph()  [32] std::vector<std::pair<int, double>, std::allocator<std::pair<int, double> > >::~vector() [41] std::__cxx11::to_string(unsigned long)
+  [25] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > __gnu_cxx::__to_xstring<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, char>(int (*)(char*, unsigned long, char const*, __va_list_tag*), unsigned long, char const*, ...) [3] std::vector<double, std::allocator<double> >::_M_fill_assign(unsigned long, double const&) [12] std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >* std::__do_uninit_fill_n<std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >*, unsigned long, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > >(std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >*, unsigned long, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&)
+  [11] std::_Hashtable<int, int, std::allocator<int>, std::__detail::_Identity, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, true, true> >::_M_rehash(unsigned long, unsigned long const&) [38] std::vector<double, std::allocator<double> >::~vector() [31] std::vector<int, std::allocator<int> >* std::__do_uninit_fill_n<std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > >(std::vector<int, std::allocator<int> >*, unsigned long, std::vector<int, std::allocator<int> > const&)
+  [22] std::_Deque_base<int, std::allocator<int> >::_M_initialize_map(unsigned long) [29] std::vector<int, std::allocator<int> >::_M_fill_assign(unsigned long, int const&) [23] std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)
+  [37] std::_Function_handler<void (int), psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&)::{lambda(int)#1}>::_M_manager(std::_Any_data&, std::_Any_data const&, std::_Manager_operation) [13] void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [8] _init
+  [10] std::_Function_handler<void (int), psaim::computePartition(CSRGraph const&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<int, std::allocator<int> >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >&)::{lambda(int)#1}>::_M_invoke(std::_Any_data const&, int&&) [39] std::vector<int, std::allocator<int> >::resize(unsigned long) [1] main
+   [7] void std::deque<int, std::allocator<int> >::_M_push_back_aux<int const&>(int const&) [40] std::vector<int, std::allocator<int> >::reserve(unsigned long)

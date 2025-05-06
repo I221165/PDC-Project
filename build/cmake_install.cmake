@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2
+# Install script for directory: /mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/with-time/psaiim_project_complete_exact_v2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/psaiim_project_complete_exact_v2/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/d/PDC/Project/psaiim_project_complete_exact_v2 (2)/with-time/psaiim_project_complete_exact_v2/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

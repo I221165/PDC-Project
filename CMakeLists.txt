@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 project(psaiim_project)
 
-# Set C++ standard
+# Use C++17
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -24,6 +24,7 @@ if (NOT METIS_INCLUDE_DIR OR NOT METIS_LIBRARY)
 endif()
 message(STATUS "Found METIS: include=${METIS_INCLUDE_DIR}, lib=${METIS_LIBRARY}")
 
+# Include directories
 include_directories(
   ${MPI_CXX_INCLUDE_PATH}
   ${Boost_INCLUDE_DIRS}
@@ -31,6 +32,7 @@ include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR}/src
 )
 
+# Our executable
 add_executable(psaiim
   src/main.cpp
   src/GraphLoader.cpp
@@ -40,6 +42,7 @@ add_executable(psaiim
   src/utils.cpp
 )
 
+# Link against MPI, OpenMP, Boost, METIS
 target_link_libraries(psaiim
   ${MPI_CXX_LIBRARIES}
   OpenMP::OpenMP_CXX
